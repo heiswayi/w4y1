@@ -1,7 +1,4 @@
-var program_ver = 'v1.1 beta';
-var db_version = '20150706';
-var ai_level = '0.4%';
-var online_status = true;
+var program_ver = 'v2018.0518';
 
 $('.particles').particleground({
 	dotColor: '#cc0000',
@@ -21,12 +18,12 @@ var botPrompt = '[[;#666;transparent]<][[gb;#cc0000;transparent]W4Y1][[;#666;tra
 
 $('.terminal').terminal(function(command, term) {
 	if (command == '') { return; }
-	if (command.toLowerCase() == '--help') { showHelp(term); }
+	if (command.toLowerCase() == '/help') { showHelp(term); }
 	else {
 		term.echo(botPrompt+' [[g;#770000;transparent]'+wayi.transform(command)+']');
 		if (wayi.quit) {
 			// last user input was a quit phrase
-			term.clear();
+			//term.clear();
 			wayi.reset();
 		}
 	}
@@ -40,11 +37,11 @@ $('.terminal').terminal(function(command, term) {
 		term.set_prompt('[[;#666;transparent]<][[gb;#0c0;transparent]'+promptName+'][[;#666;transparent]>] '); // default promptName: YOU
 		header(term); // display header/logo
 		botInit(term); // initialize bot function
-    },
-    onClear: function(term) {
+  },
+  onClear: function(term) {
 		header(term);
-    },
-    onBlur: function(term) {
+  },
+  onBlur: function(term) {
 		// call function to start counting the timer
 	},
 	onFocus: function(term) {
@@ -62,13 +59,6 @@ function botResponse(term, text) {
 	term.echo(botPrompt+' [[g;#770000;transparent]'+text+']');
 }
 
-function stats(dbversion, online, note) {
-	var status;
-	if (online == true) { status = '[[g;#27ae60;transparent]Online]'; }
-	else { status = '[[g;#c0392b;transparent]Offline]'; }
-	return '[[g;#444;transparent]{][[g;#666;transparent]DB Version:] [[g;#888;transparent]'+dbversion+'][[g;#444;transparent]}] [[g;#444;transparent]{][[g;#666;transparent]Status:] '+status+'[[g;#444;transparent]}] [[g;#444;transparent]{][[g;#666;transparent]AI Level:] [[g;#f39c12;transparent]'+note+'][[g;#444;transparent]}]\n';
-} 
-
 function header(term) {
 	term.echo(
 	'[[gb;#cc0000;transparent]'+
@@ -79,11 +69,8 @@ function header(term) {
 	'  \\__/\\  /\\____   | / ______||___|\n'+
 	'       \\/      |__| \\/            \n'+
 	']'+
-	'[[g;#770000;transparent]01010111] [[g;#770000;transparent]00110100] [[g;#770000;transparent]01011001] [[g;#770000;transparent]00110001] [[g;#666;transparent]'+program_ver+']\n'+
-	'[[g;#666;transparent]An AI program created by] [[gbu;#666;transparent]Heiswayi Nrird] [[g;#666;transparent]as a fragment of his memories.]\n'+
-	stats(db_version, online_status, ai_level)+
-	'[[g;#666;transparent]@Website https://wayi.me]\n\n'+
-	'[[g;#666;transparent]You may type "][[gb;#888;transparent]--help][[g;#666;transparent]" to explore more...]\n\n'
+	'[[g;#770000;transparent]01010111] [[g;#770000;transparent]00110100] [[g;#770000;transparent]01011001] [[g;#770000;transparent]00110001] [[g;#cc0000;transparent]'+program_ver+']\n'+
+	'[[gi;#666;transparent]A Terminal to Heiswayi Nrird\'s Mind]\n\n'
 	);
 }
 

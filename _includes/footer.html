@@ -1,0 +1,17 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ "/assets/js/vendor/jquery-1.11.2.min.js" | prepend: site.baseurl | prepend: site.url }}"><\/script>')</script>
+<script src="{{ "/assets/js/vendor/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/jquery.terminal-0.8.8.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/jquery.particleground.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/bot.engine.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/bot.data.common.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/jquery.mousewheel.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/assets/js/bot.integration.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','{{ site.google_analytics_code }}','auto');ga('send','pageview');
+</script>

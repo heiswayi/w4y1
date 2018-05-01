@@ -1,3 +1,10 @@
+# Temporary, work-in-progress stuffs
+bot.data.wayi.js
+
+# Jekyll
+_site/
+.sass-cache/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
