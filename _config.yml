@@ -3,7 +3,7 @@ title:              "W4Y1"
 description:        "Terminal to Heiswayi Nrird's Mind"
 
 # Site URL settings
-url:                https://heiswayi.nrird.com # main url
+url:                https://heiswayi.github.io # main url
 baseurl:            /w4y1 # for gh-pages
 
 # Google Analytics ID
